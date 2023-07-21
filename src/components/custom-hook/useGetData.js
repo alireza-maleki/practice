@@ -2,7 +2,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 export const useGetData = () => {
-  const { data, isLoading, isError, error, refetch } = useQuery(["cat"], () => {
+  const { data, isLoading, isError, error, refetch } = useQuery(["cat"], async () => {
     return axios.get("https://catfact.ninja/fact").then((res) => res.data);
   });
 

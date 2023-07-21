@@ -14,6 +14,7 @@ const FetchingQuery = () => {
   //   }
   // );
 
+
   const { data, isLoading, isError, error, showAlert } = useGetData();
 
   if (isLoading)
